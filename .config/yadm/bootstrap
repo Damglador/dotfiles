@@ -1,4 +1,4 @@
 #!/bin/sh
 
-test -d /data/data/com.termux/ && yadm config local.class Termux
+test -d "$HOME/.termux" && yadm config local.class Termux
 
