@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 if [ "$(uname -o)" = "Android" ]; then
   yadm config local.os Android
   echo "Set os to Android"
@@ -9,4 +8,9 @@ fi
 if [ -d "$HOME/.termux" ]; then
   yadm config local.distro Termux
   echo "Set distro to Termux"
+fi
+
+if lspci | grep -qi nvidia; then
+  yadm config --add local.class Nvidia
+  echo "Adding Nvidia class"
 fi
