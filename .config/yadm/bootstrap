@@ -7,6 +7,6 @@ if [ "$(uname -o)" = "Android" ]; then
 fi
 
 if [ -d "$HOME/.termux" ]; then
-  yadm config --add local.class Termux
-  echo "Added Termux class"
+  yadm config local.distro Termux
+  echo "Added distro to Termux"
 fi
