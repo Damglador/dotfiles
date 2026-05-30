@@ -1,4 +1,12 @@
 #!/bin/sh
 
-test -d "$HOME/.termux" && yadm config local.class Termux
 
+if [ "$(uname -o)" = "Android" ]; then
+  yadm config local.os Android
+  echo "Set os to Android"
+fi
+
+if [ -d "$HOME/.termux" ]; then
+  yadm config --add local.class Termux
+  echo "Added Termux class"
+fi
