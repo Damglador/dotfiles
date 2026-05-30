@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -z "$TERMUX__HOME" ]; then
+  yadm config local.class Termux
+fi
