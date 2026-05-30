@@ -1,0 +1,11 @@
+{
+  "autoclose": false,
+  "mkparents": true,
+  "scrollbar": true,
+  "softwrap": true,
+  "Makefile": {
+    "tabstospaces": false
+  },
+  "tabstospaces": true,
+  "tabsize": 2
+}

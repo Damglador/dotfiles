@@ -1,0 +1,27 @@
+[filter "lfs"]
+required=true
+clean=git-lfs clean -- %f
+smudge=git-lfs smudge -- %f
+process=git-lfs filter-process
+[user]
+name=Damglador
+email=vse.stopchanskyi@gmail.com
+signingkey = 051A868242DD78EF01281870F35E11F52FCC4BE3
+[credential "https://github.com"]
+helper=!/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+helper=!/usr/bin/gh auth git-credential
+[init]
+defaultBranch=master
+[commit]
+gpgsign = true
+[tag]
+gpgSign = true
+[re.sonny.Commit]
+title-length-hint=50
+body-length-wrap=72
+auto-capitalize-title=true
+[color]
+ui = auto
+[core]
+longpaths = true

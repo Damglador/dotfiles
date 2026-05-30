@@ -1,0 +1,15 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment",
+	"Ctrl-Alt-c":         "Cut|CutLine",
+	"Ctrl-x": "Quit",
+	"Ctrl-z": "Undo",
+	"\u001b[90;6~": "Redo",
+	"OldBackspace": "DeleteWordLeft",
+	"Ctrl-Delete": "DeleteWordRight",
+	"CtrlShiftUp":    "SpawnMultiCursorUp",
+	"CtrlShiftDown":  "SpawnMultiCursorDown",	
+	"Alt-x":        "RemoveAllMultiCursors",
+	"CtrlUp": "CursorUp,CursorUp",
+	"CtrlDown": "CursorDown,CursorDown"
+}

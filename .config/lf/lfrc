@@ -1,0 +1,17 @@
+#!/bin/sh
+map . set hidden!
+map w quit
+map Q %lf -remote "send $id :cd \"$OLDPWD\"; quit"
+map <enter> quit
+map <c-x> %lf -remote "send $id :cd \"$OLDPWD\"; quit"
+map t ""
+
+cmd open ${{
+	type="$(xdg-mime query filetype "$f")"
+
+	# Use xdg-mime query filetype <file> to check
+	case "$type" in
+		text/*|application/json|application/x-shellscript) micro "$f" ;;
+		*) for f in $fx; do setsid "$OPENER" "$f" >/dev/null 2>&1 & done ;;
+	esac
+}}
