@@ -8,5 +8,5 @@ fi
 
 if [ -d "$HOME/.termux" ]; then
   yadm config local.distro Termux
-  echo "Added distro to Termux"
+  echo "Set distro to Termux"
 fi
