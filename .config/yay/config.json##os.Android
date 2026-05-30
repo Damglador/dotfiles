@@ -1,0 +1,10 @@
+{
+	
+	"makepkgbin": "makepkg",
+	"makepkgconf": "/data/data/com.termux/files/usr/etc/makepkg.conf",
+	"pacmanbin": "pacman",
+	"pacmanconf": "/data/data/com.termux/files/usr/etc/pacman.conf",
+	"removemake": "yes",
+	"sudobin": "run",
+	"aur": false
+}
