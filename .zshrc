@@ -105,7 +105,7 @@ bracketed-paste() {
 zle -N bracketed-paste
 
 # ==== Inhibit idle if ssh session
-if [ "$SSH_CLIENT" ] &&
+if [ "$SSH_CLIENT" ] && command -v systemd-inhibit 2>/dev/null &&
      ! pstree -ps $$ |
        grep -q -- '-systemd-inhibit(' >/dev/null; then
 
@@ -115,4 +115,4 @@ if [ "$SSH_CLIENT" ] &&
     "$SHELL" "$@"
 fi
 
-[ -f "~/.profile" ] && source ~/.profile
+test -f ~/.profile && source ~/.profile
