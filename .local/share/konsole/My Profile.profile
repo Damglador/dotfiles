@@ -1,11 +1,11 @@
 [Appearance]
-Font=DejaVuSansM Nerd Font Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=JetBrainsMono Nerd Font Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 UseFontLineChararacters=true
 WordModeBrahmic=false
 
 [General]
-Command=/usr/bin/zsh
 Name=My Profile
+Command=/usr/bin/zsh
 Environment=TERM=konsole-256color,COLORTERM=truecolor
 Parent=FALLBACK/
 
