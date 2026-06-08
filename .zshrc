@@ -105,11 +105,9 @@ bracketed-paste() {
 zle -N bracketed-paste
 
 # ==== Inhibit idle if ssh session
-if [ "$SSH_CLIENT" ] && command -v systemd-inhibit 2>/dev/null &&
-     ! pstree -ps $$ |
-       grep -q -- '-systemd-inhibit(' >/dev/null; then
+if [ "$SSH_CLIENT" ] && command -v systemd-inhibit > /dev/null 2>1; then
 
-  echo "Inhibit automatic standby"
+  echo "Shell will ihibit idle suspend."
   exec /usr/bin/systemd-inhibit \
     --what="idle" --who="SSH" --why='Interactive SSH session' -- \
     "$SHELL" "$@"
