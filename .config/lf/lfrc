@@ -5,6 +5,7 @@ map Q %lf -remote "send $id :cd \"$OLDPWD\"; quit"
 map <enter> quit
 map <c-x> %lf -remote "send $id :cd \"$OLDPWD\"; quit"
 map t ""
+map <delete> trash
 
 cmd open ${{
 	type="$(xdg-mime query filetype "$f")"
@@ -15,3 +16,5 @@ cmd open ${{
 		*) for f in $fx; do setsid "$OPENER" "$f" >/dev/null 2>&1 & done ;;
 	esac
 }}
+
+cmd trash $IFS="$(printf '\n\t')"; trash $fx
