@@ -111,7 +111,7 @@ if [ "$SSH_CLIENT" ] && \
 
   echo "Shell will ihibit idle suspend."
   exec /usr/bin/systemd-inhibit \
-    --who="SSH" --why='Interactive SSH session' -- \
+    --what="idle" --who="SSH" --why='Interactive SSH session' -- \
     "$SHELL" "$@"
 fi
 
