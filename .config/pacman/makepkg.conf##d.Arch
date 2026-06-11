@@ -1,0 +1,4 @@
+#!/hint/bash
+# shellcheck disable=2034
+PACKAGER="Vsevolod Stopchanskyi <vse.stopchanskyi@gmail.com>"
+OPTIONS+=(!debug)
