@@ -29,8 +29,7 @@
   "format_on_save": "off",
   "hard_tabs": false,
   "icon_theme": "Colored Zed Icons Theme Light",
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -38,6 +37,7 @@
   },
   "disable_ai": true,
   "terminal": {
+    "font_size": 14.0,
     "copy_on_select": true
   },
   "languages": {
