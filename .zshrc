@@ -113,6 +113,10 @@ if [ "$SSH_CLIENT" ] && \
   exec /usr/bin/systemd-inhibit \
     --what="idle" --who="SSH" --why='Interactive SSH session' -- \
     "$SHELL" "$@"
+
+  # Fix GPG password promt
+  # https://superuser.com/questions/520980/how-to-force-gpg-to-use-console-mode-pinentry-to-prompt-for-passwords
+  export GPG_TTY=$(tty)
 fi
 
 test -f ~/.profile && source ~/.profile
