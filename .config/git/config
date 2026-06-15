@@ -25,5 +25,6 @@ auto-capitalize-title=true
 ui = auto
 [core]
 longpaths = true
+pager = /usr/share/git/diff-highlight/diff-highlight | less
 [pull]
 	rebase = true
