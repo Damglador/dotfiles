@@ -25,6 +25,9 @@ auto-capitalize-title=true
 ui = auto
 [core]
 longpaths = true
-pager = /usr/share/git/diff-highlight/diff-highlight | less
+pager = diff-highlight | less
+[color "diff-highlight"]
+oldHighlight = ul
+oldReset = noul
 [pull]
-	rebase = true
+rebase = true
