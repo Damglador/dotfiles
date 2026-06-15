@@ -25,3 +25,5 @@ auto-capitalize-title=true
 ui = auto
 [core]
 longpaths = true
+[pull]
+	rebase = true
