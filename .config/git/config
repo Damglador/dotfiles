@@ -25,7 +25,7 @@
   ui = auto
 [core]
   longpaths = true
-  pager = diff-highlight | less
+  pager = diff-highlight | $PAGER
 [color "diff-highlight"]
   oldHighlight = ul
   oldReset = noul
@@ -46,3 +46,4 @@
   pretty = format:%C(auto)%h %C(blue)%an  %C(auto)%ar  %d%n%C(cyan)%s%n
 [alias]
   s = status
+  d = diff
