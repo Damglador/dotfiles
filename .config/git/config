@@ -1,33 +1,48 @@
 [filter "lfs"]
-required=true
-clean=git-lfs clean -- %f
-smudge=git-lfs smudge -- %f
-process=git-lfs filter-process
+  required=true
+  clean=git-lfs clean -- %f
+  smudge=git-lfs smudge -- %f
+  process=git-lfs filter-process
 [user]
-name=Damglador
-email=vse.stopchanskyi@gmail.com
-signingkey = 051A868242DD78EF01281870F35E11F52FCC4BE3
+  name=Damglador
+  email=vse.stopchanskyi@gmail.com
+  signingkey = 051A868242DD78EF01281870F35E11F52FCC4BE3
 [credential "https://github.com"]
-helper=!/usr/bin/gh auth git-credential
+  helper=!/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-helper=!/usr/bin/gh auth git-credential
+  helper=!/usr/bin/gh auth git-credential
 [init]
-defaultBranch=master
+  defaultBranch=master
 [commit]
-gpgsign = true
+  gpgsign = true
 [tag]
-gpgSign = true
+  gpgSign = true
 [re.sonny.Commit]
-title-length-hint=50
-body-length-wrap=72
-auto-capitalize-title=true
+  title-length-hint=50
+  body-length-wrap=72
+  auto-capitalize-title=true
 [color]
-ui = auto
+  ui = auto
 [core]
-longpaths = true
-pager = diff-highlight | less
+  longpaths = true
+  pager = diff-highlight | less
 [color "diff-highlight"]
-oldHighlight = ul
-oldReset = noul
+  oldHighlight = ul
+  oldReset = noul
 [pull]
-rebase = true
+  rebase = true
+[push]
+  autoSetupRemote = true
+  followTags = true
+[rebase]
+  autoStash = true
+  missingCommitsCheck = warn
+[log]
+  abbrevCommit = true
+
+# https://git-scm.com/docs/pretty-formats
+# https://stackoverflow.com/questions/15458237/git-pretty-format-colors#15458378
+[format]
+	pretty = format:%C(auto)%h %C(blue)%an  %C(auto)%ar  %d%n%C(cyan)%s%n
+[alias]
+  s = status
