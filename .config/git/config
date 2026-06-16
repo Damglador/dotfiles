@@ -25,7 +25,7 @@
   ui = auto
 [core]
   longpaths = true
-  pager = diff-highlight | $PAGER
+  pager = diff-highlight | ${PAGER:-less --mouse}
 [color "diff-highlight"]
   oldHighlight = ul
   oldReset = noul
