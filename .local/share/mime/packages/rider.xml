@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+    <mime-type type="application/x-sln">
+        <comment>Rider solution file</comment>
+        <sub-class-of type="text/plain"/>
+        <glob pattern="*.sln"/>
+        <icon name="rider"/>
+        <alias type="text/x-sln"/>
+    </mime-type>
+    <mime-type type="application/x-slnx">
+        <comment>Rider solution file</comment>
+        <sub-class-of type="text/xml"/>
+        <glob pattern="*.slnx"/>
+        <icon name="rider"/>
+        <alias type="text/x-slnx"/>
+    </mime-type>
+    <mime-type type="application/x-csproj">
+        <comment>Microsoft Build Engine (MSBuild) project file</comment>
+        <sub-class-of type="text/xml"/>
+        <glob pattern="*.csproj"/>
+        <icon name="text-xml"/>
+        <alias type="text/x-csproj"/>
+    </mime-type>
+</mime-info>
