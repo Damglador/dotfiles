@@ -1,4 +1,8 @@
 
+for file in "${XDG_CONFIG_HOME:-$HOME/.config}/profile.d/"*.sh; do
+  source "$file"
+done
+
 zstyle :compinstall filename "$HOME/.zshrc"
 # === Move files to XDG directories
 XDG_DATA_HOME=${XDG_DATA_HOME:-${HOME}/.local/share}
@@ -36,7 +40,6 @@ done
 set +o allexport # disable exporting sourced
 # === Colors in tty
 [[ "$XDG_SESSION_TYPE" == "tty" ]] && TERM=xterm-256color
-source "${XDG_CONFIG_HOME}/plasma-workspace/env/env.sh"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Color Tab completion
 setopt autocd # cd in typed directories
 #setopt correct # suggest commands if typed doesn't exist

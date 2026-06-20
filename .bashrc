@@ -1,5 +1,7 @@
 
-source "$XDG_CONFIG_HOME/plasma-workspace/env/env.sh"
+for file in "${XDG_CONFIG_HOME:-$HOME/.config}/profile.d/"*.sh; do
+  source "$file"
+done
 
 #start_time=$(date +%s%N)
 
