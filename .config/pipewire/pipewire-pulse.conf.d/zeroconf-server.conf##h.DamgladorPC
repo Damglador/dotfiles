@@ -1,0 +1,4 @@
+pulse.cmd = [
+    { cmd = "load-module" args = "module-zeroconf-publish" flags = [ ] }
+    { cmd = "load-module" args = "module-native-protocol-tcp" flags = [ ] }
+]
