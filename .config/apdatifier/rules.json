@@ -1,0 +1,9 @@
+[
+  {
+    "type": "name",
+    "value": "papirus-icon-theme",
+    "icon": "apdatifier-package",
+    "excluded": true,
+    "important": false
+  }
+]
