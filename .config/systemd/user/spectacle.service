@@ -1,0 +1,13 @@
+[Unit]
+Description=Spectacle background service
+PartOf=plasma-workspace.target
+After=plasma-workspace.target
+Requisite=plasma-workspace.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/spectacle --dbus
+Restart=always
+
+[Install]
+WantedBy=plasma-workspace.target
