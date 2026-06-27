@@ -7,5 +7,5 @@ case "$hostname" in
   Parasite)           echo 219 ;;
   "ThinkCentre-E73")  echo 160 ;;
   "Keenetic-8745")    echo 39  ;;
-  *) "$(( 0x$(echo "$hostname" | md5sum | cut -c1-8) % 256 ))" ;;
+  *) echo "$(( 0x$(echo "$hostname" | md5sum | cut -c1-8) % 256 ))" ;;
 esac
