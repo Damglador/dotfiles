@@ -52,8 +52,12 @@ zmodload zsh/complist
 
 # Breaks autosuggestions https://github.com/zsh-users/zsh-autosuggestions/issues/756
 #setopt KSH_ARRAYS # zero-based indexing,
-PROMPT='%F{77}┌─[%n@%m][%f%~%F{77}]%f
-%F{77}└%%%f ' # Prompt
+
+host_name="$(uname -n)"
+host_color="$(( 0x$(echo -n "$host_name" | md5sum | cut -c1-8) % 256 ))"
+
+PROMPT="%F{77}┌─[%n@%F{$host_color}%m%F{77}][%f%~%F{77}]%f
+%F{77}└%%%f " # Prompt
 
 PROMPT_EOL_MARK="" # Disable end of line sign
 
