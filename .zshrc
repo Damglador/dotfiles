@@ -53,7 +53,7 @@ zmodload zsh/complist
 # Breaks autosuggestions https://github.com/zsh-users/zsh-autosuggestions/issues/756
 #setopt KSH_ARRAYS # zero-based indexing,
 
-hostcolor="$("$XDG_CONFIG_HOME/profile.d/hostcolor.sh")"
+hostcolor="$("$XDG_CONFIG_HOME/profile.d/hostcolor")"
 
 PROMPT="%F{$hostcolor}┌─[%n@%m][%f%~%F{$hostcolor}]%f
 %F{$hostcolor}└%%%f " # Prompt
