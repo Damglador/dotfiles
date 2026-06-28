@@ -5,5 +5,5 @@
 	"pacmanbin": "pacman",
 	"pacmanconf": "/data/data/com.termux/files/usr/etc/pacman.conf",
 	"removemake": "yes",
-	"sudobin": "run",
+	"sudobin": "run"
 }
