@@ -18,7 +18,6 @@ HISTFILE="$XDG_STATE_HOME"/bash/history
 source /usr/share/doc/pkgfile/command-not-found.bash
 
 # ============== Configuration ====================
-shopt -s autocd
 
 # ============== Inhibit sleep if SSH	==============
 if [ "$SSH_CLIENT" ] &&

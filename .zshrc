@@ -41,7 +41,6 @@ set +o allexport # disable exporting sourced
 # === Colors in tty
 [[ "$XDG_SESSION_TYPE" == "tty" ]] && TERM=xterm-256color
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Color Tab completion
-setopt autocd # cd in typed directories
 #setopt correct # suggest commands if typed doesn't exist
 autoload -U colors && colors # idk some colors
 autoload -Uz select-word-style && select-word-style bash # Better word erase
