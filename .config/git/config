@@ -47,3 +47,5 @@
 [alias]
   s = status
   d = diff
+[credential]
+  helper = /usr/lib/git-core/git-credential-libsecret
