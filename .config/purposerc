@@ -1,15 +1,9 @@
 ### Related to: https://github.com/KDE/purpose?tab=readme-ov-file
 [plugins]
-#
-# list: $ ls /usr/lib/qt6/plugins/kf6/purpose
-#
-# saso@arch$ ls /usr/lib/qt6/plugins/kf6/purpose
-# barcodeplugin.so emailplugin.so kdeconnectsmsplugin.so phabricatorplugin.so saveasplugin.so
-# bluetoothplugin.so imgurplugin.so nextcloudplugin.so purpose_gdrive.so telegramplugin.so
-# clipboardplugin.so kdeconnectplugin.so pastebinplugin.so reviewboardplugin.so youtubeplugin.so
-# 
-# just remove .so
+# all the plugins are located in /usr/lib/qt6/plugins/kf6/purpose
+# put them in disabled= without .so extension
 # example:
 # disabled=kdeconnectplugin,imgurplugin
 # bluetoothplugin,imgurplugin,nextcloudplugin,purpose_gdrive,clipboardplugin,pastebinplugin,youtubeplugin
+
 disabled=bluetoothplugin,imgurplugin,nextcloudplugin,purpose_gdrive,clipboardplugin,youtubeplugin
