@@ -22,3 +22,5 @@ vim.diagnostic.enable = true
 vim.diagnostic.config({
   virtual_lines = true,
 })
+
+vim.g.suda_smart_edit = 1

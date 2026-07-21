@@ -80,4 +80,5 @@ return {
       -- log_level = 'debug',
     },
   },
+  "lambdalisue/vim-suda",
 }
