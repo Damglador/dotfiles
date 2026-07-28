@@ -24,3 +24,7 @@ vim.diagnostic.config({
 })
 
 vim.g.suda_smart_edit = 1
+
+vim.keymap.set({ 'n', 'v' }, '<Del>', '"_x')
+-- Delete key deletes instead of cutting
+vim.keymap.set('v', '<Del>', '"_d')

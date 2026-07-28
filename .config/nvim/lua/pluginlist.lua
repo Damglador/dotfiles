@@ -21,33 +21,19 @@ return {
   "neovim/nvim-lspconfig",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
-
   {
-    "folke/lazydev.nvim", -- for vim-specific lua
-    ft = "lua", -- only load on lua
-    opts = {
-      library = {
-        -- See the configuration section for more details
-        -- Load luvit types when the `vim.uv` word is found
-        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-      },
-    },
-  },
-  { -- optional cmp completion source for require statements and module annotations
-    "hrsh7th/nvim-cmp",
+    "saghen/blink.cmp",
     dependencies = {
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
+      "saghen/blink.lib",
       "rafamadriz/friendly-snippets",
-      "hrsh7th/cmp-nvim-lsp",
     },
-    opts = function(_, opts)
-      opts.sources = opts.sources or {}
-      table.insert(opts.sources, {
-        name = "lazydev",
-        group_index = 0, -- set group index to 0 to skip loading LuaLS completions
-      })
-    end,
+    opts = {
+      keymap = { preset = "super-tab" },
+    },
+    sources = {
+      default = { "lsp", "path", "snippets", "buffer" },
+    },
+    build = function() require('blink.cmp').build():pwait() end
   },
 
   "mateuszwieloch/automkdir.nvim",
