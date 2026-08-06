@@ -16,6 +16,7 @@ alias py="python"
 alias ipconfig="ip r"
 alias ff="fastfetch"
 alias matrix="cmatrix"
+alias ":q"=exit
 
 # ============== Configuration ====================
 alias ls='ls --color -h'
@@ -24,9 +25,9 @@ alias grep='grep --color'
 alias diff='diff --color'
 # Ймовірно має бути у конфігу lf як loadable.
 # Треба буде зробити модульну систему еліасів і змінних
-lfcd () {
-    # `command` is needed in case `lfcd` is aliased to `lf`
-    cd "$(command lf -print-last-dir "$@")" || return
+lfcd() {
+  # `command` is needed in case `lfcd` is aliased to `lf`
+  cd "$(command lf -print-last-dir "$@")" || return
 }
 alias lf=lfcd
 alias unshare="sudo unshare -n sudo -u damglador"
