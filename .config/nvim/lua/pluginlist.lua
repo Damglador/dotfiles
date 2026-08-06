@@ -66,5 +66,8 @@ return {
       -- log_level = 'debug',
     },
   },
-  "lambdalisue/vim-suda",
+  "lambdalisue/vim-suda", -- Write root files
+  "ThePrimeagen/vim-be-good",
+  "folke/which-key.nvim",
+  "romainl/vim-cool", -- Clears search highlight when not in search
 }
