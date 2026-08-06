@@ -2,20 +2,19 @@ partial alphanumeric_keys
 xkb_symbols "custom" {
     include "us(basic)"
     name[Group1]= "English (Custom)";
-    key <AE01>  {[  1,              exclam,       onesuperior                           ]};
-    key <AE02>  {[  2,              at,           twosuperior,      U2019               ]};
-    key <AE07>  {[  7,              question                                            ]};
-    key <AD03>  {[  e,              E,            adiaeresis,       Adiaeresis          ]};
-    key <AD04>  {[  r,              R,            registered                            ]};
-    key <AD05>  {[  t,              T,            trademark                             ]};
-    key <AD06>  {[  y,              Y                                                   ]};
-    key <AD09>  {[  o,              O,            odiaeresis,       Odiaeresis          ]};
-    key <AC01>  {[  a,              A,            aring,            Aring               ]};
-    key <AB08>  {[  comma,          less,         guillemotleft,    doublelowquotemark  ]};
-    key <AB09>  {[  period,         greater,      guillemotright,   leftdoublequotemark ]};
-    key <AB10>  {[  slash,          ampersand                                           ]};
-    key <AE11>	{[  minus,          underscore,   emdash,           endash              ]};
-
+    key <AE01>  {[  "1",  "!",  "¹"        ]};
+    key <AE02>  {[  "2",  "@",  "²",  "’"  ]};
+    key <AE07>  {[  "7",  "?"              ]};
+    key <AD03>  {[  "e",  "E",  "ä",  "Ä"  ]};
+    key <AD04>  {[  "r",  "R",  "®"        ]};
+    key <AD05>  {[  "t",  "T",  "™"        ]};
+    key <AD06>  {[  "y",  "Y"              ]};
+    key <AD09>  {[  "o",  "O",  "ö",  "Ö"  ]};
+    key <AC01>  {[  "a",  "A",  "å",  "Å"  ]};
+    key <AB08>  {[  ",",  "<",  "«",  "„"  ]};
+    key <AB09>  {[  ".",  ">",  "»",  "“"  ]};
+    key <AB10>  {[  "/",  "&"              ]};
+    key <AE11>  {[  "-",  "_",  "—",  "–"  ]};
 
     include "level3(ralt_switch)"
 };
