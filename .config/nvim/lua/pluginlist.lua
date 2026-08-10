@@ -70,4 +70,5 @@ return {
   "ThePrimeagen/vim-be-good",
   "folke/which-key.nvim",
   "romainl/vim-cool", -- Clears search highlight when not in search
+  "lark-parser/vim-lark-syntax",
 }
