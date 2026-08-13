@@ -1,4 +1,3 @@
-
 for file in "${XDG_CONFIG_HOME:-$HOME/.config}/profile.d/"*.sh; do
   source "$file"
 done
@@ -120,7 +119,7 @@ if [ "$SSH_CLIENT" ] && \
     "$SHELL" "$@"
 fi
 
-if [ "$XDG_SESSION_TYPE" = "tty" ]; then
+if [ "$XDG_SESSION_TYPE" != "wayland" ]; then
   # Fix GPG password promt
   # https://superuser.com/questions/520980/how-to-force-gpg-to-use-console-mode-pinentry-to-prompt-for-passwords
   export GPG_TTY=$(tty)
