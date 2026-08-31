@@ -1,0 +1,16 @@
+[Unit]
+Description=EasyEffects
+Requires=pipewire.service
+After=graphical-session.target pipewire.service
+PartOf=pipewire.service
+
+[Service]
+ExecStartPre=/usr/bin/sleep 5
+ExecStart=/usr/bin/easyeffects --gapplication-service
+Restart=always
+RestartSec=1
+TimeoutStopSec=5s
+Slice=app.slice
+
+[Install]
+WantedBy=default.target
