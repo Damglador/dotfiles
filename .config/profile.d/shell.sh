@@ -3,7 +3,11 @@
 # Disable Ctrl+Z as terminal suspend
 stty susp undef
 
-export EDITOR="micro"
+if [ "$(uname -o)" = "Android" ]; then
+  export EDITOR="micro"
+else
+  export EDITOR="nvim"
+fi
 
 alias sudo='sudo ' # Allow aliases when using sudo
 
