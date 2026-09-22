@@ -74,6 +74,8 @@ vim.lsp.config('lua_ls', {
 
 
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("qmlls")
+vim.lsp.config("qmlls", { cmd = { "qmlls6" } })
 
 require("mason").setup()
 require("mason-lspconfig").setup()
