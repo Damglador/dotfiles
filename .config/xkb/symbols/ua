@@ -1,7 +1,8 @@
 partial alphanumeric_keys
 xkb_symbols "custom" {
+    name[Group1] = "Ukrainian (Custom)";
+
     include "ua(unicode)"
-    name[Group1]= "Ukrainian (Custom)";
-    key <AE01>  {[  "1",  "!",  "¹"        ]};
-    key <AE02>  {[  "2",  "\"", "²",  "’"  ]};
+
+    key <AE03> { [ NoSymbol,    NoSymbol,    "³" ] };
 };
