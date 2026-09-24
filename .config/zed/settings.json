@@ -43,6 +43,9 @@
   "languages": {
     "Make": {
       "hard_tabs": true,
+    },
+    "Python": {
+      "tab_size": 4
     }
   }
 }
