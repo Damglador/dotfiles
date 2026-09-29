@@ -1,0 +1,2 @@
+# Disable Vulkan rendering of Kwin so dGPU can go to sleep
+KWIN_DISABLE_VULKAN=1
