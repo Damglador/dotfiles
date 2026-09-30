@@ -71,4 +71,18 @@ return {
   "folke/which-key.nvim",
   "romainl/vim-cool", -- Clears search highlight when not in search
   "lark-parser/vim-lark-syntax",
+  {
+    "yousefhadder/markdown-plus.nvim",
+    ft = "markdown",
+    opts = {},
+  },
+  {
+   "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    opts = {},
+    config = function()
+      vim.api.nvim_set_hl(0, "RenderMarkdownInlineHighlight", { bg = "#FABD2F", fg = "#282828" })
+    end
+  },
 }
