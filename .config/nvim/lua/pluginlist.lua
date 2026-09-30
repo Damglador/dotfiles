@@ -53,7 +53,10 @@ return {
     build = ":TSUpdate",
   },
   "lewis6991/gitsigns.nvim",
-  "cappyzawa/trim.nvim",
+  {
+    "cappyzawa/trim.nvim",
+    opts = {},
+  },
   {
     "rmagatti/auto-session",
     lazy = false,
