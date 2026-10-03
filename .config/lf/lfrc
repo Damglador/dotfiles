@@ -12,7 +12,7 @@ cmd open ${{
 
 	# Use xdg-mime query filetype <file> to check
 	case "$type" in
-		text/*|application/json|application/x-shellscript) micro "$f" ;;
+		text/*|application/json|application/x-shellscript) "$EDITOR" "$f" ;;
 		*) for f in $fx; do setsid "$OPENER" "$f" >/dev/null 2>&1 & done ;;
 	esac
 }}
