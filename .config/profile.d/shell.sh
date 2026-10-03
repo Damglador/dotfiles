@@ -33,7 +33,7 @@ lfcd() {
   # `command` is needed in case `lfcd` is aliased to `lf`
   cd "$(command lf -print-last-dir "$@")" || return
 }
-alias lf=lfcd
+[ "$(command -v bat)" ] && alias lf=lfcd
 alias unshare="sudo unshare -n sudo -u damglador"
 alias netjail="firejail --net=none --noprofile"
 alias bat="bat --paging=never --wrap=never --plain"
