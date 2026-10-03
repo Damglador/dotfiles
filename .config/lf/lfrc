@@ -8,11 +8,11 @@ map t ""
 map <delete> trash
 
 cmd open ${{
-	type="$(xdg-mime query filetype "$f")"
+	type="$(file "$f")"
 
-	# Use xdg-mime query filetype <file> to check
+	# Can also use xdg-mime query filetype <file> to check
 	case "$type" in
-		text/*|application/json|application/x-shellscript) "$EDITOR" "$f" ;;
+		*text*) "$EDITOR" "$f" ;;
 		*) for f in $fx; do setsid "$OPENER" "$f" >/dev/null 2>&1 & done ;;
 	esac
 }}
