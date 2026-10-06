@@ -36,14 +36,29 @@ return {
     build = function() require('blink.cmp').build():pwait() end
   },
 
-  "mateuszwieloch/automkdir.nvim",
 
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       'nvim-lua/plenary.nvim',
-      -- optional but recommended
-      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+        config = function()
+          require('telescope').load_extension('fzf')
+        end
+      },
+    },
+  },
+  {
+    "danielfalk/smart-open.nvim",
+    branch = "0.2.x",
+    config = function()
+      require("telescope").load_extension("smart_open")
+    end,
+    dependencies = {
+      "kkharji/sqlite.lua",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
   },
   {
@@ -51,11 +66,6 @@ return {
     dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
     lazy = false,
     build = ":TSUpdate",
-  },
-  "lewis6991/gitsigns.nvim",
-  {
-    "cappyzawa/trim.nvim",
-    opts = {},
   },
   {
     "rmagatti/auto-session",
@@ -69,9 +79,19 @@ return {
       -- log_level = 'debug',
     },
   },
-  "ThePrimeagen/vim-be-good",
+
+  -- Basic ============================
   "folke/which-key.nvim",
+  "lewis6991/gitsigns.nvim",
+  {
+    "cappyzawa/trim.nvim",
+    opts = {},
+  },
+  "mateuszwieloch/automkdir.nvim",
   "romainl/vim-cool", -- Clears search highlight when not in search
+  "lambdalisue/vim-suda", -- Write root files
+
+  -- Syntax ===========================
   "lark-parser/vim-lark-syntax",
   {
     "yousefhadder/markdown-plus.nvim",
@@ -79,7 +99,7 @@ return {
     opts = {},
   },
   {
-   "MeanderingProgrammer/render-markdown.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
     ft = { "markdown" },
     opts = {},
@@ -87,4 +107,8 @@ return {
       vim.api.nvim_set_hl(0, "RenderMarkdownInlineHighlight", { bg = "#FABD2F", fg = "#282828" })
     end
   },
+
+  -- Other ============================
+  "ThePrimeagen/vim-be-good",
+
 }
