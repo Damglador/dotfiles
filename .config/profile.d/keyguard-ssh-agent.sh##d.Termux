@@ -1,0 +1,3 @@
+if [ -x "$PREFIX/bin/keyguard-android-ssh-agent" ]; then
+  eval "$("$PREFIX/bin/keyguard-android-ssh-agent" --ensure -a "$PREFIX/tmp/keyguard-ssh-agent.sock")"
+fi
