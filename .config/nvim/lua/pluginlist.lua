@@ -88,8 +88,15 @@ return {
     opts = {},
   },
   "mateuszwieloch/automkdir.nvim",
-  "romainl/vim-cool", -- Clears search highlight when not in search
+  "romainl/vim-cool",     -- Clears search highlight when not in search
   "lambdalisue/vim-suda", -- Write root files
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+  },
 
   -- Syntax ===========================
   "lark-parser/vim-lark-syntax",
