@@ -1,8 +1,10 @@
 require('telescope').setup({
   defaults = {
     layout_config = {
-      width = 0.95,
-      preview_width = 0.50,
+      horizontal = {
+        width = 0.95,
+        preview_width = 0.50,
+      }
     },
   },
   extensions = {

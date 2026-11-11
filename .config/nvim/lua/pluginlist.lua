@@ -51,6 +51,28 @@ return {
     },
   },
   {
+    "rachartier/tiny-code-action.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    event = "LspAttach",
+    opts = {
+      picker = {
+        "telescope",
+        opts = {
+          initial_mode = "normal",
+          layout_strategy = "vertical",
+        }
+      }
+    },
+    keys = {
+      {
+        "<leader>ca",
+        function() require("tiny-code-action").code_action() end,
+        mode = { "n", "x" },
+        desc = "Code action",
+      },
+    },
+  },
+  {
     "danielfalk/smart-open.nvim",
     branch = "0.2.x",
     config = function()
