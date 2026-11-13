@@ -5,7 +5,7 @@ AlternateShortcut=Alt+Right
 AlternateShortcut=Alt+Left
 
 [Shortcuts][org.kde.kwi.terminal][copy]
-AlternateShortcut=Ctrl+C
+Shortcut=Ctrl+C
 
 [Shortcuts][org.kde.kwi.terminal][paste]
-AlternateShortcut=Ctrl+V
+Shortcut=Ctrl+V
